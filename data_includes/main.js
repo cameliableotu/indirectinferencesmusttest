@@ -8,7 +8,7 @@ PennController( "welcome" ,
     ,
     newText("<p> Hey everyone! </p>")
     ,
-    newText("<p> The wizard wants to ask you some questions to figure out how you understand certain sentences about various and animals. </p>" ),
+    newText("<p> The wizard wants to ask you some questions to figure out how you understand certain sentences about various animals. </p>" ),
     newText("<p>Please enter your ID, answer some questions and then click the button below to start the pretest.</p>")
     ,
     newTextInput("ID")
