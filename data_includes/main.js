@@ -12,18 +12,26 @@ PennController( "welcome" ,
     newText("<p>Please enter your ID, answer some questions and then click the button below to start the pretest.</p>")
     ,
     newTextInput("ID")
+	       .settings.log()
+    .settings.lines(0)
         .print()
     ,
      newText("<p> What is your age? </p>"),
     newTextInput("Age")
+	       .settings.log()
+    .settings.lines(0)
         .print()
 	       ,
 	  newText("<p> What is your gender?</p>"),
 	       newTextInput ("Gender")
+	       .settings.log()
+    .settings.lines(0)
         .print()
 	       , 
 	        newText("<p> What is your profession?</p>"),
 	    newTextInput ("Profession")  
+	       .settings.log()
+    .settings.lines(0)
         .print()
 	       ,
 	       newText ("<p> To move to the next page, always use the space bar. </p>")
