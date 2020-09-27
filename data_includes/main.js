@@ -72,7 +72,7 @@ PennController("preexperiment" ,
 Template( variable => 
   newTrial( "experiment" ,
    
-    newText(variable.Description).
+    newText(variable.Description)
 	           .unfold(2000)
        
     ,
