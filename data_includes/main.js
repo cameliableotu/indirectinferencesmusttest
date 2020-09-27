@@ -92,7 +92,7 @@ PennController("experiment" ,
   .log( "Item"   , variable.Item   )
   .log( "Condition" , variable.Condition )
   .log( "Group"  , variable.Group  )
-))
+)
    
 PennController.SendResults( "send" );
 PennController( "final" ,
