@@ -53,8 +53,10 @@ PennController("preexperiment" ,
 	        .print()
 	       ,
  newText ("<p> Snorkmaiden and Moomin are spending their Sunday outdoors. Snorkmaiden is telling Moomin about some cute animals, but Moomin's English is not so good. Let's help him figure out what animals Snorkmaiden is referring to.</p>"),
-	        
-newImage("snorkmaidenandmoomin.png").size(200, 200)
+	 
+	       newCanvas(450,200)
+        .add(100 , 0, getImage(""snorkmaidenandmoomin.png"). size(300, 200))
+       
 	        .print ()
 	       ,
 	       
