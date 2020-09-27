@@ -54,9 +54,12 @@ PennController("preexperiment" ,
 	       ,
  newText ("<p> Snorkmaiden and Moomin are spending their Sunday outdoors. Snorkmaiden is telling Moomin about some cute animals, but Moomin's English is not so good. Let's help him figure out what animals Snorkmaiden is referring to.</p>"),
 	 
-	       newImage("snorkmaiden", "snorkmaidenandmoomin.png")
+	       newImage("snorkmaiden", "snorkmaidenandmoomin.png"),
+         newCanvas(450,200)
+        .add(   0 , 0 , getImage("snorkmaiden") )
        
-	        .print ()
+        .print()
+	        
 	       ,
 	       
 newText ("<p> Snorkmaiden could be referring to an animal you can see or one that is hiding, so you can only see its shadow. You simply have to click on the picture you think Snorkmaiden is referring to. </p>")
