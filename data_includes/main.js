@@ -71,7 +71,9 @@ PennController("preexperiment" ,
 
 Template( variable => 
   newTrial( "experiment" ,
-   
+	   newAudio("description", variable.AudioFile).
+	   play(),
+
     newText(variable.Description)
 	           .unfold(2000)
        
@@ -92,7 +94,10 @@ Template( variable =>
         .shuffle()
         .keys(          "F"    ,          "J"   )
         .log()
-        .wait()
+        .wait(),
+	   ,
+    getAudio("description")
+       .wait("first")
     
   )
   .log( "ID"     , getVar("ID")    )
