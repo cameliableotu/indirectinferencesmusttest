@@ -53,8 +53,8 @@ PennController("experiment" ,
 	        .print()
 	       ,
    newText ("<p> Snorkmaiden and Moomin are spending their Sunday outdoors. Snorkmaiden is telling Moomin about some cute animals, but Moomin's English is not so good. Let's help him figure out what animals Snorkmaiden is referring to.</p>"),
-	        ,
-newImage("snorkmaidenandmoomin")
+	        
+newImage("snorkmaidenandmoomin"),
 	       
 newText ("<p> Snorkmaiden could be referring to an animal you can see or one that is hiding, so you can only see its shadow. You simply have to click on the picture you think Snorkmaiden is referring to. </p>")
 	       ,
@@ -90,7 +90,7 @@ newText ("<p> Snorkmaiden could be referring to an animal you can see or one tha
   .log( "Item"   , variable.Item   )
   .log( "Condition" , variable.Ending )
   .log( "Group"  , variable.Group  )
-
+))
    
 PennController.SendResults( "send" );
 PennController( "final" ,
