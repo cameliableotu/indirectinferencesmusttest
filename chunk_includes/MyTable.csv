@@ -1,9 +1,0 @@
-Description,ShadowFile,CharacterFile,Item,Group,Condition
-The bear must be floating with a balloon.,bearshadow.png,bearreal.png,bear ,A,must
-The dolphin is playing with a ball.,dolphinshadow.png,dolphinreal.png,dophin,A,is
-The cat must be practicing the trumpet.,catshadow.png,catreal.png,cat,A,must
-The cow is jumping over the moon.,cowshadow.png,cowreal.png,cow,A,is
-The bear is floating with a balloon.,bearshadow.png,bearreal.png,bear ,B,is
-The dolphin must be playing with a ball.,dolphinshadow.png,dolphinreal.png,dolphin,B,must
-The cat is practicing the trumpet.,catshadow.png,catreal.png,cat,B,is
-The cow must be jumping over the moon.,cowshadow.png,cowreal.png,cow,B,must
