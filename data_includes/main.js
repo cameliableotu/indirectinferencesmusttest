@@ -52,7 +52,7 @@ PennController("preexperiment" ,
 	    defaultText
 	        .print()
 	       ,
-   newText ("<p> Snorkmaiden and Moomin are spending their Sunday outdoors. Snorkmaiden is telling Moomin about some cute animals, but Moomin's English is not so good. Let's help him figure out what animals Snorkmaiden is referring to.</p>"),
+ newText ("<p> Snorkmaiden and Moomin are spending their Sunday outdoors. Snorkmaiden is telling Moomin about some cute animals, but Moomin's English is not so good. Let's help him figure out what animals Snorkmaiden is referring to.</p>"),
 	        
 newImage("snorkmaidenandmoomin").size(200,200),
 	       
@@ -66,17 +66,15 @@ Template( variable =>
     newTimer(500)
         .start()
         .wait()
-    ,
-    newAudio("description", variable.AudioFile)
-        .play()
+  
     ,
     newText(variable.Description)
         .unfold(2600)
     ,
-    newImage("two", variable.PluralImageFile)
+    newImage("two", variable.ShadowFile)
         .size(200,200)
     ,
-    newImage("one", variable.SingularImageFile)
+    newImage("one", variable.CharacterFile)
         .size(200,200)
     ,
     newCanvas(450,200)
@@ -91,16 +89,13 @@ Template( variable =>
         .log()
         .wait()
     ,
-    getAudio("description")
-       .wait("first")
-    ,
     newTimer(500)
         .start()
         .wait()
   )
   .log( "ID"     , getVar("ID")    )
   .log( "Item"   , variable.Item   )
-  .log( "Ending" , variable.Condition )
+  .log( "Condition" , variable.Condition )
   .log( "Group"  , variable.Group  )
 )
 SendResults( "send" );
