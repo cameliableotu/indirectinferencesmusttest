@@ -1,6 +1,6 @@
 PennController.DebugOff() 
 PennController.ResetPrefix(null);
-PennController.Sequence( "welcome", "experiment", "send" , "final" )
+PennController.Sequence( "welcome", "preexperiment", "experiment", "send" , "final" )
 ;
 PennController( "welcome" ,
     defaultText
@@ -48,7 +48,7 @@ PennController( "welcome" ,
 	      
 .log( "ID" , getVar("ID") );
 
-PennController("experiment" ,
+PennController("preexperiment" ,
 	    defaultText
 	        .print()
 	       ,
@@ -58,11 +58,13 @@ newImage("snorkmaidenandmoomin").size(200,200),
 	       
 newText ("<p> Snorkmaiden could be referring to an animal you can see or one that is hiding, so you can only see its shadow. You simply have to click on the picture you think Snorkmaiden is referring to. </p>")
 	       ,
-   newText ("<p> Let's start! </p>"),
-	
-	
-	
-	Template( variable => 
+   newText ("<p> Let's start! </p>"));
+
+PennController("experiment" ,
+	    defaultText
+	        .print()
+	       ,	
+	Template(variable => 
   newTrial(
     newText(variable.Description)
         .unfold(2600)
@@ -85,10 +87,10 @@ newText ("<p> Snorkmaiden could be referring to an animal you can see or one tha
         .wait()
     
     
-  )
+  ))
   .log( "ID"     , getVar("ID")    )
   .log( "Item"   , variable.Item   )
-  .log( "Condition" , variable.Ending )
+  .log( "Condition" , variable.Condition )
   .log( "Group"  , variable.Group  )
 ))
    
@@ -97,7 +99,7 @@ PennController( "final" ,
 	       newText ("<p> Thank you for your participation!. </p>")
 	       .print()
 	       ,
-	 newText("<p> The wizard thanks you too! Bubbye! </p>")
+	 newText("<p> Bubbye! </p>")
         .print(),
 	      
     newButton("void")
