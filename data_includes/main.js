@@ -71,13 +71,9 @@ newText ("<p> Snorkmaiden could be referring to an animal you can see or one tha
 
 Template( variable => 
   newTrial( "experiment" ,
-    newTimer(500)
-        .start()
-        .wait()
-  
-    ,
+   
     newText(variable.Description)
-        .unfold(2600)
+       
     ,
     newImage("two", variable.ShadowFile)
         .size(200,200)
@@ -96,10 +92,7 @@ Template( variable =>
         .keys(          "F"    ,          "J"   )
         .log()
         .wait()
-    ,
-    newTimer(500)
-        .start()
-        .wait()
+    
   )
   .log( "ID"     , getVar("ID")    )
   .log( "Item"   , variable.Item   )
