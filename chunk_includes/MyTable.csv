@@ -1,0 +1,9 @@
+AudioFile,Description,ShadowFile,CharacterFile,Item,Group,Condition
+bearmust.mp4a,The bear must be floating with a balloon.,bearshadow.png,bearreal.png,bear ,A,must
+dophinis.mp4a,The dolphin is playing with a ball.,dolphinshadow.png,dolphinreal.png,dophin,A,is
+catmust.mp4a,The cat must be practicing the trumpet.,catshadow.png,catreal.png,cat,A,must
+cowis.mp4a,The cow is jumping over the moon.,cowshadow.png,cowreal.png,cow,A,is
+bearis.mp4a,The bear is floating with a balloon.,bearshadow.png,bearreal.png,bear ,B,is
+dophinmust.mp4a,The dolphin must be playing with a ball.,dolphinshadow.png,dolphinreal.png,dolphin,B,must
+catis.mp4a,The cat is practicing the trumpet.,catshadow.png,catreal.png,cat,B,is
+cowmust.mp4a,The cow must be jumping over the moon.,cowshadow.png,cowreal.png,cow,B,must
