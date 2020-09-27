@@ -1,6 +1,6 @@
 PennController.DebugOff() 
 PennController.ResetPrefix(null);
-PennController.Sequence( "welcome", "preexperiment", "experiment", "send" , "final" )
+PennController.Sequence( "welcome", "preexperiment", randomize("experiment"), "send" , "final" )
 ;
 PennController( "welcome" ,
     defaultText
@@ -60,19 +60,23 @@ newText ("<p> Snorkmaiden could be referring to an animal you can see or one tha
 	       ,
    newText ("<p> Let's start! </p>"));
 
-PennController("experiment" ,
-	    defaultText
-	        .print()
-	       ,	
-	Template(variable => 
-  newTrial(
+
+Template( variable => 
+  newTrial( "experiment" ,
+    newTimer(500)
+        .start()
+        .wait()
+    ,
+    newAudio("description", variable.AudioFile)
+        .play()
+    ,
     newText(variable.Description)
         .unfold(2600)
     ,
-    newImage("two", variable.CharacterFile)
+    newImage("two", variable.PluralImageFile)
         .size(200,200)
     ,
-    newImage("one", variable.ShadowFile)
+    newImage("one", variable.SingularImageFile)
         .size(200,200)
     ,
     newCanvas(450,200)
@@ -82,19 +86,24 @@ PennController("experiment" ,
     ,
     newSelector()
         .add( getImage("two") , getImage("one") )
+        .shuffle()
         .keys(          "F"    ,          "J"   )
         .log()
         .wait()
-    
-    
-  ))
+    ,
+    getAudio("description")
+       .wait("first")
+    ,
+    newTimer(500)
+        .start()
+        .wait()
+  )
   .log( "ID"     , getVar("ID")    )
   .log( "Item"   , variable.Item   )
-  .log( "Condition" , variable.Condition )
+  .log( "Ending" , variable.Condition )
   .log( "Group"  , variable.Group  )
 )
-   
-PennController.SendResults( "send" );
+SendResults( "send" );
 PennController( "final" ,
 	       newText ("<p> Thank you for your participation!. </p>")
 	       .print()
