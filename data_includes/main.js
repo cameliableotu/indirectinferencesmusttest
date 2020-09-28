@@ -57,7 +57,7 @@ PennController("preexperiment" ,
 	  
 	       newImage("snorkmaiden", "snorkmaidenandmoomin.png"),
          newCanvas(450,200)
-        .add(200, 0 , getImage("snorkmaiden") )
+        .add(300, 0 , getImage("snorkmaiden") )
        
         .print()
 	        
