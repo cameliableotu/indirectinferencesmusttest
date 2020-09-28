@@ -28,12 +28,7 @@ PennController( "welcome" ,
     .settings.lines(0)
         .print()
 	       , 
-	        newText("<p> What do you do?</p>"),
-	    newTextInput ("Profession")  
-	       .settings.log()
-    .settings.lines(0)
-        .print()
-	       ,
+	     
 	       newText ("<p> To move to the next page, use the space bar. </p>")
 	       .print()
 	       ,
