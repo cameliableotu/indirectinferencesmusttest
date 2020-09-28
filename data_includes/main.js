@@ -34,7 +34,7 @@ PennController( "welcome" ,
     .settings.lines(0)
         .print()
 	       ,
-	       newText ("<p> To move to the next page, always use the space bar. </p>")
+	       newText ("<p> To move to the next page, use the space bar. </p>")
 	       .print()
 	       ,
 	       
