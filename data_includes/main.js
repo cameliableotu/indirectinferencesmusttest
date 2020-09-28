@@ -16,7 +16,7 @@ PennController( "welcome" ,
     .settings.lines(0)
         .print()
     ,
-     newText("<p> What is your age? </p>"),
+     newText("<p> How old are you? </p>"),
     newTextInput("Age")
 	       .settings.log()
     .settings.lines(0)
